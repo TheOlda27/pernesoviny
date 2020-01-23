@@ -2,10 +2,12 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -27,6 +29,7 @@
             <items>
               <MenuItem mnemonicParsing="false" text="Delete" />
                   <MenuItem fx:id="negative" mnemonicParsing="false" onAction="#negativeFlag" text="Negative" />
+                  <MenuItem fx:id="treshold" mnemonicParsing="false" onAction="#tresholdFlag" text="Treshold" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="About">
@@ -76,5 +79,8 @@
          </children>
       </GridPane>
       <ImageView fx:id="imageViewBig" fitHeight="458.0" fitWidth="431.0" layoutX="22.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="40.0" />
+      <Slider fx:id="tresholdvalueSlider" layoutX="162.0" layoutY="507.0" onMouseReleased="#tresholduj" visible="false" />
+      <Label fx:id="tresholdvalueLabel" layoutX="75.0" layoutY="506.0" text="Treshold value:" visible="false" />
+      <Button fx:id="tresholdvalueButton" layoutX="309.0" layoutY="502.0" mnemonicParsing="false" onAction="#getAutomaticTreshold" onMouseReleased="#tresholduj" text="Recommended value" visible="false" />
    </children>
 </AnchorPane>
